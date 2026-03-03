@@ -11,7 +11,7 @@
 
   <body class="container mt-4">
 
-    <form class="row g-3 needs-validation" novalidate>
+    <form class="row g-3">
 
       <!-- First Name -->
       <div class="col-md-4">
@@ -56,13 +56,13 @@
 
       <!-- Graduation Year -->
       <div class="col-md-3">
-        <label for="graduation-year" class="form-label">Graduation Year</label>
-        <select id="graduation-year" class="form-select" required>
+        <label for="grad-year-select" class="form-label">Graduation Year</label>
+        <select id="grad-year-select" class="form-select" required>
           <option value="" selected disabled>Choose...</option>
-          <option value="2020">2020</option>
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-          <option value="2023">2023</option>
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
         </select>
         <div class="invalid-feedback">
           Please select your graduation year.
@@ -78,7 +78,7 @@
         </div>
       </div>
 
-      <!-- Terms -->
+      <!-- Terms & Conditions -->
       <div class="col-12">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="conditions-checkbox" required>
@@ -97,25 +97,6 @@
       </div>
 
     </form>
-
-    <!-- Bootstrap Validation Script -->
-    <script>
-      (function () {
-        'use strict'
-        var forms = document.querySelectorAll('.needs-validation')
-
-        Array.prototype.slice.call(forms)
-          .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-              if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-              }
-              form.classList.add('was-validated')
-            }, false)
-          })
-      })()
-    </script>
 
   </body>
 </html>
